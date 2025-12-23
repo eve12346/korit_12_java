@@ -11,7 +11,7 @@ package ch01_variable;
         2) 다중 주석: / +shift + 8 + enter
         3) 사후 주석 : 주석 처리할 부분의 코드 라인에 Ctrl + /
  */
-public class main {
+public class Main {
     public static void main(String[] args) {
         System.out.println("안녕하세요.");
         System.out.println(1);
