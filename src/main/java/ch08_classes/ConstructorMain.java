@@ -10,6 +10,22 @@ public class ConstructorMain {
         // 근데 잘 생각해보면 아니 만들면서 곧장 color는 빨강이라고 지정할 수 없는건가에
         // 해당하는겁니다
         // Car myCar = new Car("빨강");
+        Constructor constructor3 = new Constructor(3);
+        System.out.println(constructor3.num);
 
+        // 지시사항 # 1 작성
+        Constructor constructor4 = new Constructor("김사");
+        // name은 랴딩 / title은 parameter / "김사"는 argument
+        // 근데 field를 name으로 잡았을 때, 매개변수를 name으로 잡아버리면
+        // this.name = name; 형태로 작성될겁니다.
+        System.out.println(constructor4.name);
+
+        // 지시사항 # 2 작성
+        Constructor constructor5 = new Constructor(5, "김오");
+        System.out.println(constructor5.num);
+        System.out.println(constructor5.name);
+
+        // 지시사항 # 3 작성
+        constructor5.displayInfo();
     }
 }
