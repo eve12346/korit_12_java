@@ -1,6 +1,6 @@
 package ch10_access_modifier.bank;
 
-public class Bank2Main {
+public class BankMain2 {
     public static void main(String[] args) {
         // 객체 생성 및 실패 사례
         Bank2 bank0 = new Bank2(123456, "김영", 12345, 12345);
@@ -30,6 +30,14 @@ public class Bank2Main {
 
         bank1.showAccountInfo();
         bank2.showAccountInfo();
-        bank1.deposit(50000,1234);
+        bank1.deposit(50000, 1234);
+        bank1.withdraw(200000, 1234);
+        bank1.withdraw(100000, 1234);
+        System.out.println();
+        bank2.withdraw(100000, 1234);
+        bank2.deposit(200000, 1234);
+        System.out.println("\n최종 계좌 정보");
+        bank1.showAccountInfo();
+        bank2.showAccountInfo();
     }
 }
