@@ -78,7 +78,7 @@ public class Array01 {
             arr04[i] = i + 41;
             System.out.print(arr04[i] + " / ");
         }
-        // 비어있는 String 배열으 ㄹ선언하고 내부 element로 "안" "녕" "하" "세" "요"fh
+        // 비어있는 String 배열을 선언하고 내부 element로 "안" "녕" "하" "세" "요"fh
         // 초기화한 후 안녕하세요 로 콘솔에 출력할 수 있도록 하시고
         System.out.println();
         String[] arr05 = {"안", "녕", "하", "세", "요"};
