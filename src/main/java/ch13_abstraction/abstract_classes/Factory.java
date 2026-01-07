@@ -21,4 +21,5 @@ public abstract class Factory {
     public void showInfo() {
         System.out.println("공장의 정보를 출력합니다.\n공장 이름 : " + name);
     }
+
 }

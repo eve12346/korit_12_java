@@ -37,8 +37,9 @@ public class FactoryMain {
         phoneFactory1.manage();
         // 추상 클래스의 일반 메서드를 호출할 수 있는지 확인
         phoneFactory1.showInfo();
+
         /*
-            어제는 상속 배운 부분과 합쳐져 생각을 해보 ㄹ때, 추상 클래스는
+            어제는 상속 배운 부분과 합쳐져 생각을 해볼 때, 추상 클래스는
             상속을 전제로 한다는 것을 알 수 있습니다. 하지만 Java 버전 업에
             따라 익명 클래스를 통해 FactoryMain에서만 임시적으로 쓸 수 있는
             객체를 생성하는 것도 가능합니다.
@@ -55,5 +56,31 @@ public class FactoryMain {
             만약 부모 클래스에 showInfo() 메서드가 있는 걸 몰랐다면
             PhoneFactory 클래스에 별개의 showInfo() 메서드를 따로 정의했을테니까요.
          */
+        System.out.println("--------------------");
+
+        TabletFactory tabletFactory1 = new TabletFactory();
+        tabletFactory1.setName("애플 태블릿 공장");
+        tabletFactory1.setName("구글 태블릿 공장");
+        String factoryName = tabletFactory1.getName();
+        System.out.println("현재 공장은 " + factoryName + "으로 변경되었습니다.");
+
+        tabletFactory1.produce("구글 테블릿");
+        tabletFactory1.manage();
+        tabletFactory1.upgrade("구글 태블릿 10인치 2세대");
+
+        System.out.println("--------------------");
+
+        Factory factory2 = new Factory() {
+            @Override
+            public void produce(String model) {
+                System.out.println(model + "컴퓨터를 생산합니다.");
+            }
+            @Override
+            public void manage() {
+                System.out.println("컴퓨터 공장을 관리합니다.");
+            }
+        };
+        factory2.setName("삼성 컴퓨터 공장");
+        factory2.showInfo();
     }
 }
