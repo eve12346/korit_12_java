@@ -71,6 +71,6 @@ public class Book {
     }
 
     public void showInfo() {
-        System.out.println("제목 : " + getTitle() + "\n저자 : " + getAuthor());
+        System.out.print("제목 : " + getTitle() + "\n저자 : " + getAuthor());
     }
 }
