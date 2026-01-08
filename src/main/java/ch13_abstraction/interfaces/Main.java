@@ -36,23 +36,7 @@ public class Main {
          */
 
 //        tvRemoteController.powerButton.onPressed();
-        // 전원on
-        tvRemoteController.onPressedPowerButton();
-        // 채널 다운
-        tvRemoteController.onPressedChannelDownButton();
-        tvRemoteController.onDownChannelDownButton();
-        // 채널 업
-        tvRemoteController.onPressedChannelUpButton();
-        System.out.println(tvRemoteController.onUpChannelUpButton1());
-        tvRemoteController.onUpChannelUpButton2();
-        // 볼륨 다운
-        tvRemoteController.onPressedVolumeDownButton();
-        tvRemoteController.onDownVolumeDownButton();
-        // 볼륨 업
-        tvRemoteController.onPressedVolumeUpButton();
-        System.out.println(tvRemoteController.onUpVolumeUpButton());
-        // 전원off
-        tvRemoteController.onPressedPowerButton();
+
         /*
             VolumeDownButton 클래스를 정의하시오.
             VolumeUpButton 클래스를 정의하시오.
@@ -74,6 +58,45 @@ public class Main {
                     볼륨을 계속 올립니다.
                     전원을 끕니다.
          */
+        // TV 리모컨 조작
+        // 전원 on
+        tvRemoteController.onPressedPowerButton();
+        // 채널 다운
+        tvRemoteController.onPressedChannelDownButton();
+        tvRemoteController.onDownChannelDownButton();
+        // 채널 업
+        tvRemoteController.onPressedChannelUpButton();
+        System.out.println(tvRemoteController.onUpChannelUpButton1());
+        tvRemoteController.onUpChannelUpButton2();
+        // 볼륨 다운
+        tvRemoteController.onPressedVolumeDownButton();
+        tvRemoteController.onDownVolumeDownButton();
+        // 볼륨 업
+        tvRemoteController.onPressedVolumeUpButton();
+        System.out.println(tvRemoteController.onUpVolumeUpButton());
+        // 전원 off
+        tvRemoteController.onPressedPowerButton();
 
+        System.out.println("-----에어컨 파트-----");
+        AirConditionerController airConditionerController = new AirConditionerController(
+                new PowerButton(),
+                new TemperatureDownButton(),
+                new TemperatureUpButton(),
+                new ModeChangeButton()
+        );
+        // 에어컨 리모컨 조작
+        // 전원 on
+        airConditionerController.onPressedPowerButton();
+        // 온도 다운
+        airConditionerController.onPressedTemperatureDownButton();
+        airConditionerController.onDownTemperatureDownButton();
+        //온도 업
+        airConditionerController.onPressedTemperatureUpButton();
+        System.out.println(airConditionerController.onUpTemperatureUpButton());
+        // 모드 변경
+        airConditionerController.onPressedModeChangeButton();
+        airConditionerController.onPressedModeChangeButton();
+        // 전원 off
+        airConditionerController.onPressedPowerButton();
     }
 }
