@@ -166,20 +166,21 @@ public class CentralControl {
         }
     }
 
-    public void deleteDevice() {
-
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("삭제할 기기의 이름을 입력하세요 >>> ");
-            String delete = scanner.nextLine();
-            for (int i = 0; i < deviceArray.length; i++) {
-                if (delete != null && deviceArray[i].getClass().getSimpleName() == delete) {
-                    deviceArray[i] = null;
-                    System.out.println(delete + "이(가) 1개 삭제 되었습니다.");
-                    return;
-                }
-            }
-        }
-
+//    public void deleteDevice() {
+//
+//            Scanner scanner = new Scanner(System.in);
+//            System.out.print("삭제할 기기의 이름을 입력하세요 >>> ");
+//            String delete = scanner.nextLine();
+//            for (int i = 0; i < deviceArray.length; i++) {
+//                if (deviceArray[i].getClass().getSimpleName().equals(delete)) {
+//                    deviceArray[i] = null;
+//                    System.out.println(delete + "이(가) 1개 삭제 되었습니다.");
+//                    return;
+//                } else if (delete != deviceArray[i].getClass().getSimpleName()) {
+//                    System.out.println("잘못된 입력값 입니다.");
+//                }
+//            }
+//        }
 }
 /*
     Printer 클래스와 Speaker 클래스를 생성하고 Power를 implement하시오.

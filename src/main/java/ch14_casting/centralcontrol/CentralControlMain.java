@@ -51,8 +51,6 @@ public class CentralControlMain {
 
         System.out.println("--------------기기 삭제----------------");
 
-        centralControl1.deleteDevice();
-        centralControl1.showInfo();
 
     }
 }
