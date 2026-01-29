@@ -2,6 +2,7 @@ package ch02_operator;
 /*
     논리 연산자
     true(1) / false(0) : 컴퓨터가 읽을 수 있는 두 숫자
+
     boolean : true / false를 구분하는 자료형
 
     AND(&&) : 곱 연산자 T X T = T / T X F = F / F X F = F => 하나라도 false면 false
